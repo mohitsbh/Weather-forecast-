@@ -1,0 +1,100 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Gradient Backgrounds for Different Weather Conditions */
+.clear { background: linear-gradient(to right, #f7b733, #fc4a1a); } /* Sunny */
+.clouds { background: linear-gradient(to right, #636FA4, #E8CBC0); } /* Cloudy */
+.rain { background: linear-gradient(to right, #00c6fb, #005bea); } /* Rainy */
+.snow { background: linear-gradient(to right, #83a4d4, #b6fbff); } /* Snow */
+.thunderstorm { background: linear-gradient(to right, #373B44, #4286f4); } /* Thunderstorm */
+.drizzle { background: linear-gradient(to right, #a1c4fd, #c2e9fb); } /* Drizzle */
+.mist { background: linear-gradient(to right, #757F9A, #D7DDE8); } /* Mist */
+.default { background: linear-gradient(to right, #1e3c72, #2a5298); } /* Default */
+
+/* Main Container */
+.container {
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 50px;
+}
+
+/* Input & Button */
+input {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff3d00;
+}
+
+/* Weather Display */
+#weather-result {
+    margin-top: 20px;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+/* Forecast Sections */
+.forecast-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.forecast-item img {
+    width: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}
